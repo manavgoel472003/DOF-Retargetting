@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "robot-trajectory-retargeting"
+version = "0.1.0"
+description = "URDF-based robot trajectory retargeting across arms with different DOF via a shared canonical TCP frame."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.23",
+  "lerobot[kinematics] @ git+https://github.com/Seeed-Projects/lerobot.git@0f392484458cb5ebca0310c0c4c47390a31c80ed",
+]
+
+[project.optional-dependencies]
+render = [
+  "imageio>=2.30",
+  "matplotlib>=3.7",
+]
+
+[project.scripts]
+robot-retarget-trajectory = "robot_trajectory_retargeting.retarget_trajectory:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
