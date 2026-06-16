@@ -34,6 +34,9 @@ Optional GIF rendering needs:
 - `matplotlib`
 - `imageio`
 
+For full environment details, see [REQUIREMENTS.md](REQUIREMENTS.md). For a
+step-by-step install and first run, see [SETUP.md](SETUP.md).
+
 ## Validation Results
 
 The repo includes the recent validated GIF outputs under
